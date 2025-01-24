@@ -1,0 +1,8 @@
+# See https://redocly.com/docs/cli/configuration/
+
+apis:
+  qonto-api-client@v1:
+    root: ./openapi_v2.yml
+
+extends:
+  - minimal

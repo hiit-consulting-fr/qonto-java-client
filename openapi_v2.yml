@@ -1169,17 +1169,19 @@ paths:
                               type: string
               examples:
                 when file is too big:
-                  errors:
-                    - code: file_too_big
-                      detail: File is too big
-                      source:
-                        pointer: /file
+                  value:
+                    errors:
+                      - code: file_too_big
+                        detail: File is too big
+                        source:
+                          pointer: /file
                 when file is not the correct type:
-                  errors:
-                    - code: invalid_file_type
-                      detail: Invalid file type
-                      source:
-                        pointer: /file
+                  value:
+                    errors:
+                      - code: invalid_file_type
+                        detail: Invalid file type
+                        source:
+                          pointer: /file
         '403':
           description: returns a forbidden error
           content:
@@ -1348,6 +1350,7 @@ paths:
                         name:
                           type: string
                         parent_id:
+                          type: string
                           nullable: true
                   meta:
                     type: object
@@ -1355,8 +1358,10 @@ paths:
                       current_page:
                         type: integer
                       next_page:
+                        type: integer
                         nullable: true
                       prev_page:
+                        type: integer
                         nullable: true
                       total_pages:
                         type: integer
@@ -2773,8 +2778,10 @@ paths:
                       current_page:
                         type: integer
                       next_page:
+                        type: integer
                         nullable: true
                       prev_page:
+                        type: integer
                         nullable: true
                       total_pages:
                         type: integer
@@ -7086,9 +7093,11 @@ components:
           type: integer
           example: 2
         next_page:
+          type: integer
           nullable: true
           example: null
         prev_page:
+          type: integer
           nullable: true
           example: 1
         total_pages:
